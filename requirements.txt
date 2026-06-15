@@ -1,0 +1,6 @@
+pandas
+numpy
+tenserflow
+tenserflow-recommenders
+fastapi
+redis
