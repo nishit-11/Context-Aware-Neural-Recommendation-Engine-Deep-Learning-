@@ -4,3 +4,4 @@ tenserflow
 tenserflow-recommenders
 fastapi
 redis
+pyspark

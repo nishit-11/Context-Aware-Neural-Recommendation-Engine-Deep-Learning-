@@ -71,9 +71,9 @@ purchase_count = (
     )
 )
 
-from pyspark.sqk.functions import avg
+from pyspark.sql.functions import avg
 
-avg_spend = avg_spend(
+avg_spend =(
     transactions
     .groupBy("customer_id")
     .agg(
@@ -84,7 +84,7 @@ avg_spend = avg_spend(
 
 from pyspark.sql.functions import sum
 
-total_spend = total_spend(
+total_spend = (
     transactions
     .groupBy("customer_id")
     .agg(
@@ -119,7 +119,7 @@ customer_features = (
     )
 )
 
-item_popularity= item_popularity(
+item_popularity= (
     transactions
     .groupBy("article_id")
     .agg(
@@ -128,7 +128,7 @@ item_popularity= item_popularity(
     )
 )
 
-item_avg = item_avg(
+item_avg = (
     transactions
     .groupBy("article_id")
     .agg(
@@ -160,15 +160,21 @@ item_features =(
     )
 )
 
-customer_features.write.csv(
-    "data/customers_features_spark",
-    header=True,
-    mode="overwrite"
+customer_features.write.mode("overwrite") \
+    .option("header", True) \
+    .csv("data/customer_features_spark")
+
+item_features.write.mode("overwrite") \
+    .option("header", True) \
+    .csv("data/item_features_spark")
+
+
+customer_features.toPandas().to_csv(
+    "data/customer_features.csv",
+    index=False
 )
 
-item_features.write.csv(
-    "data/item_features_csv",
-    header=True,
-    mode="overwrite"
+item_features.toPandas().to_csv(
+    "data/item_features.csv",
+    index=False
 )
-
