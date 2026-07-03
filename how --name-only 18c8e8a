@@ -1,0 +1,85 @@
+[33mcommit 18c8e8a693df97bf7fe17488fce736dff48f6667[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature-engineering[m[33m)[m
+Author: Nishit <nishitmalkania@gmail.com>
+Date:   Thu Jul 2 23:07:24 2026 +0530
+
+    Complete Model Training and Saved Model
+
+ data/customer_features.csv                         | 1362282 [32m+++++++++++++++++[m
+ data/customer_features_spark/._SUCCESS.crc         |     Bin [31m0[m -> [32m8[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53452[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m52936[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53696[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53116[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53484[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53120[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53136[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53032[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53556[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53128[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53520[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53304[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53568[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53304[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53348[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53572[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53540[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53800[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53668[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53388[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53624[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53196[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53504[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53548[m bytes
+ ...df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv.crc |     Bin [31m0[m -> [32m53716[m bytes
+ data/customer_features_spark/_SUCCESS              |       0
+ ...0-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54523 [32m+[m
+ ...1-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54011 [32m+[m
+ ...2-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54784 [32m+[m
+ ...3-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54186 [32m+[m
+ ...4-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54571 [32m+[m
+ ...5-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54193 [32m+[m
+ ...6-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54221 [32m+[m
+ ...7-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54112 [32m+[m
+ ...8-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54638 [32m+[m
+ ...9-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54202 [32m+[m
+ ...0-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54606 [32m+[m
+ ...1-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54386 [32m+[m
+ ...2-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54659 [32m+[m
+ ...3-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54380 [32m+[m
+ ...4-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54426 [32m+[m
+ ...5-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54653 [32m+[m
+ ...6-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54632 [32m+[m
+ ...7-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54895 [32m+[m
+ ...8-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54762 [32m+[m
+ ...9-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54470 [32m+[m
+ ...0-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54702 [32m+[m
+ ...1-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54277 [32m+[m
+ ...2-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54584 [32m+[m
+ ...3-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54627 [32m+[m
+ ...4-c7df3afa-ffc4-4391-bafd-985dc3adc753-c000.csv |   54806 [32m+[m
+ data/item_features_spark/._SUCCESS.crc             |     Bin [31m0[m -> [32m8[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m8188[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m7908[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m8096[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m8072[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m7944[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m7876[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m8172[m bytes
+ ...6e2438-12ec-4679-9326-4c40f62d4334-c000.csv.crc |     Bin [31m0[m -> [32m9488[m bytes
+ data/item_features_spark/_SUCCESS                  |       0
+ ...0-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   13001 [32m+[m
+ ...1-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   12583 [32m+[m
+ ...2-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   12886 [32m+[m
+ ...3-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   12837 [32m+[m
+ ...4-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   12619 [32m+[m
+ ...5-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   12533 [32m+[m
+ ...6-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   13020 [32m+[m
+ ...7-1c6e2438-12ec-4679-9326-4c40f62d4334-c000.csv |   15076 [32m+[m
+ data/training_curves.png                           |     Bin [31m0[m -> [32m118786[m bytes
+ notebooks/EDA/week-2_model .ipynb                  |    1914 [32m+[m[31m-[m
+ src/models/candidate_tower.keras                   |     Bin [31m0[m -> [32m1810146[m bytes
+ src/models/evaluation_summary.json                 |       8 [32m+[m
+ src/models/query_tower.keras                       |     Bin [31m0[m -> [32m2117308[m bytes
+ src/models/two_tower_model.keras                   |     Bin [31m0[m -> [32m11564853[m bytes
+ week1-2.ipynb                                      |       1 [31m-[m
+ 78 files changed, 2831064 insertions(+), 2 deletions(-)
