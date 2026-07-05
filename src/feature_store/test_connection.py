@@ -1,5 +1,11 @@
-from redis_store import RedisFeatureStore
+from .redis_store import RedisFeatureStore
 
 store = RedisFeatureStore()
 
-print(store.connect())
+try:
+    if store.connect():
+        print("Connected Successfully")
+except Exception as e:
+    print(e)
+
+
