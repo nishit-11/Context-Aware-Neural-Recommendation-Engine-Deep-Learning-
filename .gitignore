@@ -13,3 +13,8 @@ data/articles.csv
 data/customers.csv
 data/transactions_train.csv
 data/final_data.csv
+
+data/customer_features.csv
+data/customer_features_spark/
+data/item_features_spark/
+week1-2.ipynb
