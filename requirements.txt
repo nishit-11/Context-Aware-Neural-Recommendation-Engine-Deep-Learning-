@@ -1,6 +1,9 @@
 pandas
 numpy
-tenserflow
-tenserflow-recommenders
+tensorflow
+tensorflow-recommenders
 fastapi
 redis
+pyspark
+faiss-cpu
+uvicorn
