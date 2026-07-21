@@ -24,10 +24,10 @@ print(customer_df.shape)
 print(item_df.shape)
 
 print("Generating user embeddings...")
-user_embeddings = generate_user_embeddings(customer_df.head(100))
+user_embeddings = generate_user_embeddings(customer_df)
 
 print("Generating item embeddings...")
-item_embeddings = generate_item_embeddings(item_df.head(100))
+item_embeddings = generate_item_embeddings(item_df)
 
 print(user_embeddings.shape)
 print(item_embeddings.shape)
@@ -41,7 +41,7 @@ print("Redis Connected")
 print("Storing User Embeddings...")
 
 for user_id, embedding in zip(
-    customer_df.head(100)["customer_id_enc"],
+    customer_df["customer_id_enc"],
     user_embeddings
 ):
     store.save_user_embedding(
