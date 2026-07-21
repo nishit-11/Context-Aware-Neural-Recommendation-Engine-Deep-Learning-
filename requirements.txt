@@ -7,3 +7,6 @@ redis
 pyspark
 faiss-cpu
 uvicorn
+pydantic
+pydantic-settings
+
